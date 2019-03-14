@@ -1,5 +1,10 @@
 # Rippled Docker Image
 
+## Requirement
+
+* [Docker](https://docs.docker.com/install)
+
+
 ## How to use
 
 ### testnet
@@ -38,7 +43,7 @@
 
 3. Check whether the server run
     ```sh
-    curl -X POST http://127.0.0.1:15005 -d '{"method": "server_info"}'
+    curl -X POST http://127.0.0.1:25005 -d '{"method": "server_info"}'
     ```
 
 4. Remove Docker container
