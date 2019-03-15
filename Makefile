@@ -19,6 +19,10 @@ run:
 		-p $(PORT):5005 \
 		rippled_$(NETWORK):$(RIPPLED_VER)
 
+.PHONY: rerun
+rerun:
+	docker start $(CONTAINER_NAME)
+
 .PHONY: login
 login:
 	docker exec -it $(CONTAINER_NAME) /bin/bash
