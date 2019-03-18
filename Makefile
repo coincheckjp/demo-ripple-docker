@@ -1,5 +1,3 @@
-RIPPLED_VER := 1.2.2
-PORT := 15005
 NETWORK := testnet
 CONTAINER_NAME := rippled_$(NETWORK)_01
 
