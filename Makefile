@@ -1,5 +1,4 @@
-NETWORK := testnet
-CONTAINER_NAME := rippled_$(NETWORK)_01
+CONTAINER_NAME := ripple_lib_01
 
 .PHONY: init
 init:
