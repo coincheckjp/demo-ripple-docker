@@ -2,13 +2,13 @@ version: "3"
 services:
   rippled:
     env_file: .env
-    image: rippled_testnet:latest
+    image: rippled_${NETWORK}:latest
     build:
       context: rippled
       args:
         rippled_ver: ${RIPPLED_VERSION}
-        network: testnet
-    container_name: rippled_testnet_01
+        network: ${NETWORK}
+    container_name: rippled_${NETWORK}_01
     ports:
       - ${RIPPLED_PORT}:5005
   ripple-lib:
