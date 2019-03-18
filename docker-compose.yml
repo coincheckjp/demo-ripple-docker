@@ -1,0 +1,21 @@
+version: "3"
+services:
+  rippled:
+    image: rippled_testnet:latest
+    build:
+      context: rippled
+      args:
+        rippled_ver: 1.2.2
+        network: testnet
+    container_name: rippled_testnet_01
+    ports:
+      - 15005:5005
+  ripple-lib:
+    image: ripple_lib:latest
+    build:
+      context: ripple-lib
+    container_name: ripple_lib_01
+    ports:
+      - 50080:80
+    volumes:
+      - ./ripple-lib/files:/home/ripple-lib
