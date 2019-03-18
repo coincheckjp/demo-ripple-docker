@@ -3,6 +3,10 @@ PORT := 15005
 NETWORK := testnet
 CONTAINER_NAME := rippled_$(NETWORK)_01
 
+.PHONY: init
+init:
+	cp default.env .env
+
 .PHONY: build
 build:
 	docker-compose build --parallel

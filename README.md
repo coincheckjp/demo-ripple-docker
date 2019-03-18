@@ -3,40 +3,27 @@
 ## Requirement
 
 * [Docker](https://docs.docker.com/install)
+* Docker Compose
 
 
 ## How to use
 
-### testnet
-
-1. Create Docker image ([Check the latest version](https://github.com/ripple/rippled/releases))
+1. Create `.env` file
     ```sh
-    make build RIPPLED_VER=1.2.2
+    make init
     ```
 
-2. Start Docker container
+2. [Check the latest rippled version](https://github.com/ripple/rippled/releases), and edit `.env` file
+    ```sh
+    RIPPLED_VERSION=1.2.2 # Update the version
+    ```
+
+3. Start Docker containers
     ```sh
     make run
     ```
 
-3. Check whether the server run
+4. Check whether the server run
     ```sh
     curl -X POST http://127.0.0.1:15005 -d '{"method": "server_info"}'
-    ```
-
-### mainnet
-
-1. Create Docker image ([Check the latest version](https://github.com/ripple/rippled/releases))
-    ```sh
-    make build RIPPLED_VER=1.2.2 NETWORK=mainnet
-    ```
-
-2. Start Docker container
-    ```sh
-    make run NETWORK=mainnet PORT=25005
-    ```
-
-3. Check whether the server run
-    ```sh
-    curl -X POST http://127.0.0.1:25005 -d '{"method": "server_info"}'
     ```
