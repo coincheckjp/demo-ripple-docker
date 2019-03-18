@@ -23,11 +23,12 @@
     make run
     ```
 
-4. Check whether the server run
-    ```sh
-    curl -X POST http://127.0.0.1:15005 -d '{"method": "server_info"}'
-    ```
-
-    ```sh
-    curl http://127.0.0.1:50080/heartbeat
-    ```
+4. Check whether the server run  
+    * rippled
+        ```sh
+        curl -X POST http://127.0.0.1:15005 -d '{"method": "server_info"}'
+        ```
+    * ripple-lib
+        ```sh
+        curl http://127.0.0.1:50080/heartbeat
+        ```
