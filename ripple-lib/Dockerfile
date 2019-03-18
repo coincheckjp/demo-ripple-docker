@@ -4,6 +4,7 @@ WORKDIR /home/ripple-lib
 
 RUN apk update && \
   apk add \
+    bash \
     emacs \
     vim
 
